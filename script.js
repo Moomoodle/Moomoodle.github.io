@@ -397,8 +397,9 @@ window.onSpotifyIframeApiReady = (IFrameAPI) => {
 		uri: 'spotify:album:7CucpzwxAZ6kHmctI9eo4X'
     };
   const callback = (EmbedController) => {
-	  EmbedControllers = EmbedController
-	  refresh();	
+		EmbedControllers = EmbedController
+		refresh();
+		getGuesses();
 	  };
   IFrameAPI.createController(element, options, callback);
 };
