@@ -42,7 +42,6 @@ body{background-color: var(--color-tone-7);}
   justify-content: flex;
   height: 40vh;
 }
-
 .game {
   display: flex;
   flex-direction: column;
@@ -89,7 +88,7 @@ body{background-color: var(--color-tone-7);}
 .answer-fields #predictive-text {
   display: inline;
   margin-bottom: 10px;
-  width: 240px;
+  width: 235px;
   padding: 5px;
 }
 .answer-fields #submit {
@@ -105,6 +104,7 @@ body{background-color: var(--color-tone-7);}
   list-style-type: none;
   padding: 0;
   margin-top: -5px;
+  width: 320px;
 }
 
 #predictive-list li {
