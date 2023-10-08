@@ -31,6 +31,17 @@ body{background-color: var(--color-tone-7);}
     margin-bottom: 25px;
     color: white;
 }
+.ads {
+	height: 40vh;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex;
+  height: 40vh;
+}
 
 .game {
   display: flex;

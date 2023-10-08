@@ -16,23 +16,56 @@
 		<button class='infoButton button' id="infoButton" onclick="openModal('info')"><i class="fa fa-info-circle" style="font-size:24px;"></i></button>
 		<button class='practise button' id="practise" onclick="togglePractise()">Practise</button>
 	</div>
-	<div class = 'game'>
-		
-		<button class="circular-progress" onclick="playSong()"></button>
-		
-		<div class="answer-fields">
-		<input id="textbox0" class="textbox" type="text" disabled>
-		<input id="textbox1" class="textbox" type="text" disabled>
-		<input id="textbox2" class="textbox" type="text" disabled>
-		<input id="textbox3" class="textbox" type="text" disabled>
-		<input id="textbox4" class="textbox" type="text" disabled>
-		<input id="textbox5" class="textbox" type="text" disabled>
+	
+	
+
+
+	<div class='mainContainer'>
+		<div class="ads" style="width: 30%;">
+			<ins class="adsbygoogle"
+				style="display:block"
+				data-ad-client="ca-pub-1797165686944378"
+				data-ad-slot="3399043780"
+				data-ad-format="auto"
+				data-full-width-responsive="true"></ins>
+			<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
 		</div>
-		<div class="answer-fields">
-			<input type="text" id="predictive-text" onkeyup="showPredictiveText(event)">
-			<button class="button" type="button" id="submit" onclick="verifyInput()"> Submit</button>
-		<div>
-		<p id="invalidAnswer" style="color:red; display:none; font-family:Arial">Invalid Answer</p>
+		
+		
+		<div class="game" style="width: 40%;">
+			<button class="circular-progress" onclick="playSong()"></button>
+			
+			<div class="answer-fields">
+				<input id="textbox0" class="textbox" type="text" disabled>
+				<input id="textbox1" class="textbox" type="text" disabled>
+				<input id="textbox2" class="textbox" type="text" disabled>
+				<input id="textbox3" class="textbox" type="text" disabled>
+				<input id="textbox4" class="textbox" type="text" disabled>
+				<input id="textbox5" class="textbox" type="text" disabled>
+			</div>
+			<div class="answer-fields">
+				<input type="text" id="predictive-text" onkeyup="showPredictiveText(event)">
+				<button class="button" type="button" id="submit" onclick="verifyInput()"> Submit</button>
+			</div>
+			<p id="invalidAnswer" style="color:red; display:none; font-family:Arial">Invalid Answer</p>
+		</div>
+		
+		
+		<div class="ads" style="width: 30%;">
+			<ins class="adsbygoogle"
+				style="display:block"
+				data-ad-client="ca-pub-1797165686944378"
+				data-ad-slot="3399043780"
+				data-ad-format="auto"
+				data-full-width-responsive="true"></ins>
+			<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+		
+		
 	</div>
 	<div id="predictive-list"></div>
   
