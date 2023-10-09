@@ -42,8 +42,12 @@ var timeoutId;
 var intervalId;
 var practise = false;
 var selectedPredictiveIndex=0;
-//Win,Lost,Streak,MaxStreak123456 guess
-var statsData = [0,0,0,0, 0,0,0, 0,0,0];
+//Win,Lost,Streak,MaxStreak
+//PractiseStreak, MaxStreak
+//123456 guess
+var statsData = [0,0,0,0,
+				0,0,
+				0,0,0, 0,0,0];
 var practiseStreak=0;
 
 //Selected Song Details
@@ -213,14 +217,16 @@ function verifyInput() {
 				document.getElementById('submit').disabled = true;
 				textbox.style.backgroundColor='green';
 				if(!practise){
-					statsData[3+guessCount]++;
+					statsData[guessCount+6]++;
 					statsData[0]++;
 					statsData[2]++;
 					if(statsData[2]>statsData[3])
 						statsData[3]=statsData[2];
 					updateStats();
 				}else{
-					practiseStreak++;
+					statsData[4]++;
+					if(statsData[4]>statsData[5])
+						statsData[5]=statsData[4];
 					updateStatsPractise();
 				}
 				openModal("win");
@@ -236,7 +242,7 @@ function verifyInput() {
 					statsData[2]=0;
 					updateStats();
 				}else{
-					practiseStreak=0;
+					statsData[4]=0;
 					updateStatsPractise();
 				}
 				openModal('lose');
@@ -316,8 +322,10 @@ function openModal(type){
 		document.getElementById("loseSong").innerHTML="Song was "+songChoice;
 		if(practise){
 			document.getElementById("newgamelose").style.display = "block";
+			document.getElementById("streaklose").style.display = "block";
 		}else{
 			document.getElementById("newgamelose").style.display = "none";
+			document.getElementById("streaklose").style.display = "none";
 		}
 	}
 	document.getElementById("modal").style.display = "block";
@@ -495,13 +503,16 @@ function updateStats(){
 		barGraph.classList.add('bar-graph');
 		barGraph.innerHTML = `
 			<span class="bar-label">${i+1}</span>
-			<div class="bar" style="width: ${statsData[i+4] * 10+5}px;"></div>
-			<span class="bar-value">${statsData[i+4]}</span>
+			<div class="bar" style="width: ${statsData[i+6] * 10+5}px;"></div>
+			<span class="bar-value">${statsData[i+6]}</span>
 		`;
 		graphContainer.appendChild(barGraph);
 	}
 	
 }
 function updateStatsPractise(){
-	document.getElementById('practiseCurrentStreak').innerHTML = practiseStreak;
+	document.getElementById('practiseCurrentStreak').innerHTML = statsData[4];
+	document.getElementById('practiseStreak').innerHTML = statsData[5];
+	document.getElementById('practiseCurrentStreakLose').innerHTML = statsData[4];
+	document.getElementById('practiseStreakLose').innerHTML = statsData[5];
 }

@@ -102,9 +102,15 @@
 					<p id="shareText" style="display:none; color:red; margin-left:10px">Copied to Clipboard</p>
 				</div>
 				<div id="newgame" class="container">
-					<div class="value-container">
-						<h2 class="value" id="practiseCurrentStreak"></h2>
-						<p class="label">Current Streak</p>
+					<div class="streak">
+						<div class="value-container">
+							<h2 class="value" id="practiseCurrentStreak"></h2>
+							<p class="label">Current Streak</p>
+						</div>
+						<div class="value-container">
+							<h2 class="value" id="practiseStreak"></h2>
+							<p class="label">Max Streak</p>
+						</div>
 					</div>
 					<button class="button"  type="button" onclick="newGame()"><p>New Game</p></button>
 				</div>
@@ -114,7 +120,19 @@
 					<h2>You Lost</h2>
 					<p id="loseSong">Song was</p>
 				</div>
-				<div class="container" id="newgamelose">
+				<div id="streaklose" class="container">
+					<div class="streak">
+						<div class="value-container">
+							<h2 class="value" id="practiseCurrentStreakLose"></h2>
+							<p class="label">Current Streak</p>
+						</div>
+						<div class="value-container">
+							<h2 class="value" id="practiseStreakLose"></h2>
+							<p class="label">Max Streak</p>
+						</div>
+					</div>
+				</div>
+				<div id="newgamelose" class="container">
 					<button class="button" type="button" onclick="newGame()"><p>New Game</p></button>
 				</div>
 			</div>
