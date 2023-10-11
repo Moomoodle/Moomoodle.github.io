@@ -217,7 +217,7 @@ function verifyInput() {
 				document.getElementById('submit').disabled = true;
 				textbox.style.backgroundColor='green';
 				if(!practise){
-					statsData[guessCount+6]++;
+					statsData[guessCount+5]++;
 					statsData[0]++;
 					statsData[2]++;
 					if(statsData[2]>statsData[3])
@@ -454,6 +454,9 @@ function saveGuesses() {
 // Function to retrieve the guesses of the day
 function getGuesses() {
 	const currentDate = new Date().toDateString();
+	var ytdDate = new Date();
+	ytdDate.setDate(ytdDate.getDate() - 1);
+	
 	const savedGuesses = getCookie("Moomoodle");
 	if(savedGuesses == '')
 		return;
@@ -487,6 +490,8 @@ function getGuesses() {
 				openModal('lose');
 			}
 		}
+	}else if(currentDate != ytdDate.toDateString()){
+		statsData[2] = 0;
 	}
 }
 function updateStats(){
