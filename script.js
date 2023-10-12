@@ -349,7 +349,7 @@ document.addEventListener("keydown", function(event) {
 //Share
 function share() {
 	
-	var detailToCopy = "#MooMoodle "+displayDate+ " "+guessCount+"/6\n";
+	var detailToCopy = "MooMoodle "+displayDate+ " "+guessCount+"/6\n";
 	for(var i=0;i<guessCount;i++)
 	{	
 		var color = document.getElementById('textbox'+i).style.backgroundColor;
