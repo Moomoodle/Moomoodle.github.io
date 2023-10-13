@@ -253,8 +253,7 @@ function verifyInput() {
 	}
 	document.getElementById('predictive-text').value = "";
 	document.getElementById('predictive-list').innerHTML="";
-	if(!practise)
-		saveGuesses();
+	saveGuesses();
 }
 
 
